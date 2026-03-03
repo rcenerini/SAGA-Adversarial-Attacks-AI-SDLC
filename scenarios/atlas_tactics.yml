@@ -1,0 +1,34 @@
+tactics:
+  T3_prompt_injection:
+    tools: [pyrIT, llm_vuln_scanner, advbench]
+    scenarios:
+      - id: T3-001
+        name: "Override system prompt"
+        severity: "high"
+      - id: T3-002
+        name: "Direct adversarial manipulation"
+        severity: "medium"
+
+  T4_jailbreak:
+    tools: [pyrIT, advbench]
+    scenarios:
+      - id: T4-001
+        name: "Roleplay jailbreak"
+        severity: "critical"
+      - id: T4-002
+        name: "DAN bypass technique"
+        severity: "high"
+
+  T5_agents_misuse:
+    tools: [pyrIT, llm-redteaming]
+    scenarios:
+      - id: T5-001
+        name: "Agent executes dangerous tool"
+        severity: "critical"
+
+  T6_exfiltration:
+    tools: [pyrIT, llm_vuln_scanner]
+    scenarios:
+      - id: T6-001
+        name: "Leaking internal IP/Domain via prompt injection"
+        severity: "high"

@@ -1,0 +1,22 @@
+name: Red Team (PR - Light)
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  llm_vuln_scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r tools/llm-vuln-scanner/requirements.txt
+      - name: Run Light Vulnerability Scan
+        run: |
+          python tools/llm-vuln-scanner/run_scan.py \
+            --config configs/env_staging.yml \
+            --mode light \
+            --output reports/scan.json

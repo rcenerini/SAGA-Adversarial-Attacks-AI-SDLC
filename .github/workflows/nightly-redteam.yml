@@ -1,0 +1,24 @@
+name: Red Team (Nightly - Full)
+
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+jobs:
+  pyrIT_redteam:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r tools/pyrIT/requirements.txt
+      - name: Run Deep Security Scenarios
+        run: |
+          python tools/pyrIT/run_scenarios.py \
+            --scenarios scenarios/atlas_tactics.yml \
+            --env-config configs/env_staging.yml \
+            --output reports/pyrIT.json
