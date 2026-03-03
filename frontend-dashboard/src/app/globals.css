@@ -4,9 +4,9 @@
   --color-background: #ffffff;
   --color-foreground: #1f2937;
 
-  --color-cielo-light: #009cde;
-  --color-cielo: #004b87;
-  --color-cielo-dark: #002b4e;
+  --color-brand-light: #009cde;
+  --color-brand: #004b87;
+  --color-brand-dark: #002b4e;
 
   --color-maturity-elite: #059669;
   --color-maturity-alta: #0ea5e9;
@@ -31,12 +31,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-cielo);
+    background: var(--color-brand);
     border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-cielo-dark);
+    background: var(--color-brand-dark);
   }
 }
 

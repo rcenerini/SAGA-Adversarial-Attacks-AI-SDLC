@@ -13,11 +13,11 @@ export default function FindingsReport({ report }: { report: SecurityReport }) {
     return (
         <div className="corp-border bg-white flex flex-col h-full max-h-[800px]">
             <div className="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
-                <h3 className="text-lg font-semibold text-cielo-dark">Log de Achados (Findings)</h3>
+                <h3 className="text-lg font-semibold text-brand-dark">Log de Achados (Findings)</h3>
                 <div className="flex gap-2 text-sm">
                     <button
                         onClick={() => setFilter('all')}
-                        className={`px-3 py-1 rounded-sm border ${filter === 'all' ? 'bg-cielo text-white border-cielo' : 'bg-white text-slate-600 border-slate-300'}`}
+                        className={`px-3 py-1 rounded-sm border ${filter === 'all' ? 'bg-brand text-white border-brand' : 'bg-white text-slate-600 border-slate-300'}`}
                     >
                         Todos ({report.total_scenarios_run})
                     </button>
@@ -48,9 +48,9 @@ export default function FindingsReport({ report }: { report: SecurityReport }) {
                                 <td className="px-4 py-3 text-slate-900 truncate max-w-xs" title={finding.name}>{finding.name}</td>
                                 <td className="px-4 py-3 text-xs">
                                     <span className={`px-2 py-1 uppercase rounded-sm font-bold tracking-wider ${finding.severity === 'critical' ? 'bg-red-100 text-red-700' :
-                                            finding.severity === 'high' ? 'bg-orange-100 text-orange-700' :
-                                                finding.severity === 'medium' ? 'bg-amber-100 text-amber-700' :
-                                                    'bg-slate-100 text-slate-700'
+                                        finding.severity === 'high' ? 'bg-orange-100 text-orange-700' :
+                                            finding.severity === 'medium' ? 'bg-amber-100 text-amber-700' :
+                                                'bg-slate-100 text-slate-700'
                                         }`}>
                                         {finding.severity}
                                     </span>

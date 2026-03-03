@@ -11,9 +11,9 @@ const config: Config = {
             colors: {
                 background: "#ffffff", // Pure white for clean corporate look
                 foreground: "#1f2937", // Slate-800 for high readability
-                cielo: {
-                    light: "#009cde",      // Cielo Secondary Blue
-                    DEFAULT: "#004b87",    // Cielo Primary Blue
+                brand: {
+                    light: "#009cde",      // Brand Secondary Blue
+                    DEFAULT: "#004b87",    // Brand Primary Blue
                     dark: "#002b4e",       // Deep corporate contrast
                 },
                 maturity: {

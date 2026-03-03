@@ -28,15 +28,15 @@ export default function Dashboard() {
   return (
     <main className="min-h-screen bg-background text-foreground font-sans p-8">
 
-      {/* Header Corporativo (Cielo Blue Theme Focus) */}
-      <header className="flex justify-between items-center mb-8 border-b-2 border-cielo pb-4">
+      {/* Header Corporativo */}
+      <header className="flex justify-between items-center mb-8 border-b-2 border-brand pb-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-cielo-dark uppercase">AI Security Program</h1>
+          <h1 className="text-3xl font-bold tracking-tight text-brand-dark uppercase">AI Security Program</h1>
           <p className="text-sm text-slate-500 mt-1">Strategic Findings & Vulnerability Report</p>
         </div>
         <div className="text-right">
           <p className="text-xs font-mono text-slate-400">EXEC_DATE: {new Date(mockReport.execution_date).toLocaleDateString()}</p>
-          <div className="inline-block px-3 py-1 mt-2 bg-cielo-light text-white text-xs font-bold rounded-sm uppercase tracking-wider">
+          <div className="inline-block px-3 py-1 mt-2 bg-brand-light text-white text-xs font-bold rounded-sm uppercase tracking-wider">
             ATLAS Coverage Active
           </div>
         </div>
