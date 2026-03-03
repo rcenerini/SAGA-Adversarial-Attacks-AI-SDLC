@@ -20,8 +20,8 @@ A arquitetura do projeto é dividida em três pilares principais. O fluxo de dad
 
 ```mermaid
 graph TD
-    A[Scripts Python & PyRIT\n(Ferramentas de Ataque)] -->|Gera Resultados em JSON| B(GitHub Actions\nPipeline DevOps)
-    B -->|Armazena Artefatos e JSON| C[Frontend Dashboard\nNext.js + Tailwind]
+    A["Scripts Python & PyRIT<br>(Ferramentas de Ataque)"] -->|Gera Resultados em JSON| B("GitHub Actions<br>Pipeline DevOps")
+    B -->|Armazena Artefatos e JSON| C["Frontend Dashboard<br>Next.js + Tailwind"]
     C -->|Renderiza| D((Maturidade e Findings))
 ```
 
